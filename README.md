@@ -15,3 +15,36 @@ Application capabilities:
 | ------------- |:-------------:|:----:|
 | Location Search      | ✓ | ✓ |
 | Favorite places      | ✓ | ✕ |
+
+## Requirements
+
+Modules needed to run the application
+
+```
+pip install requirements.txt
+```
+
+### Running
+
+Standard run django Web Application
+
+```
+python manage.py runserver
+```
+
+
+## Built With
+
+* [Django](https://www.djangoproject.com/) - The web framework used
+* [Python](https://www.python.org/) - Language used
+* [SASS](https://sass-lang.com/) - CSS Preprocessor
+
+## Authors
+
+* **Deadshumz** - *Initial work* - [github](https://github.com/deadshumz)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
