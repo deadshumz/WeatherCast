@@ -7,7 +7,7 @@ Application capabilities:
 
 | User status / Functions        | Authorized           | Non-authorized  |
 | ------------- |:-------------:| -----:|
-| Location Search      | <li>- [x] item1</li> | - [ ] bbbb |
+| Location Search      | - [x] item1 | - [ ] bbbb |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
