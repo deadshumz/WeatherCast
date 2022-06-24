@@ -17,7 +17,7 @@
             {% if user.is_authenticated %}
             <button class="btn shadow-none border-0 p-0 d-block ms-auto" onclick="change_favorite(this, '{{ result.city}}')"><i class="bi fs-4 {% if result.is_favorite %}bi-star-fill text-warning{% else %}bi-star{% endif %}" id="favorite-star"></i></button>
             {% else %}
-            <a class="btn border-0 p-0 ms-auto" href="{% url 'core:index' %}"><i class="bi fs-4 {% if result.is_favorite %}bi-star-fill text-warning{% else %}bi-star{% endif %}" id="favorite-star"></i></a>
+            <a class="btn border-0 p-0 ms-auto" href="{% url 'users:signup' %}"><i class="bi fs-4 {% if result.is_favorite %}bi-star-fill text-warning{% else %}bi-star{% endif %}" id="favorite-star"></i></a>
             {% endif %}
         </div>
         <h1 class="text-center" id="cityname">{{ result.city }}</h1>
