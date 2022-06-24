@@ -8,7 +8,7 @@ from .models import FavoriteCity
 
 def forecastAPI(city):
     # https://www.weatherapi.com/
-    key = '6a0482faf2c9400db0a200652221706'
+    key = ''
     url = f'https://api.weatherapi.com/v1/forecast.json?key={key}&q={city}&days=3&aqi=no&alerts=no'
     if (requests.get(url).status_code != 200):
         return 'error'

@@ -1,6 +1,9 @@
 # WeatherCast
+<<<<<<< HEAD
 Weather app on django framework that shows weather forecast
 
+=======
+>>>>>>> 76e3a90f81e3e9cb2f6191bf2c34d064cf50fc46
 Application capabilities:
 * User registration and authorization
 * Location Search
@@ -15,6 +18,7 @@ Application capabilities:
 | ------------- |:-------------:| :----:|
 | Location Search      | ✓ | ✓ |
 | Favorite places      | ✓ | ✕ |
+<<<<<<< HEAD
 
 
 
@@ -97,3 +101,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+=======
+>>>>>>> 76e3a90f81e3e9cb2f6191bf2c34d064cf50fc46
