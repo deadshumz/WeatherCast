@@ -43,7 +43,7 @@ python manage.py runserver
 
 * **Deadshumz** - *Initial work* - [github](https://github.com/deadshumz)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/deadshumz/WeatherCast/contributors) who participated in this project.
 
 ## License
 
