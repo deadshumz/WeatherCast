@@ -8,7 +8,7 @@ Application capabilities:
   * Icon for weather conditions
   * 12 hour weather forecast starting from the current local time
 * Favorite places
-  * Add or remove space from favorites
+  * Add or remove place from favorites
   * 6 hour weather forecast for selected place with weather conditions icons
 
 | User status / Functions        | Authorized           | Non-authorized  |
@@ -47,4 +47,4 @@ See also the list of [contributors](https://github.com/deadshumz/WeatherCast/con
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
