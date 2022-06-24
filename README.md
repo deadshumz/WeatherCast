@@ -8,7 +8,7 @@ Application capabilities:
   * Icon for weather conditions
   * 12 hour weather forecast starting from the current local time
 * Favorite places
-  * Add or remove space from favorites
+  * Add or remove place from favorites
   * 6 hour weather forecast for selected place with weather conditions icons
 
 | User status / Functions        | Authorized           | Non-authorized  |
