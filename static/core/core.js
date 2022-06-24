@@ -4,12 +4,15 @@ favorite_star = document.getElementById('favorite-star')
 favorite_btn = document.getElementById('favorite-btn')
 
 function change_favorite(e, cityname) {
-    const formData = new FormData();
+    const formData = new FormData(),
+          xhr = new XMLHttpRequest(),
+          localHref = window.location.href,
+          csrfmiddlewaretoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    
     formData.append('favorite_change', cityname)
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", window.location.href);
-    xhr.setRequestHeader('X-CSRFToken', document.querySelector('[name=csrfmiddlewaretoken]').value);
+    xhr.open("POST", localHref);
+    xhr.setRequestHeader('X-CSRFToken', csrfmiddlewaretoken);
     xhr.send(formData);
 
     class_list = ['text-warning', 'bi-star', 'bi-star-fill']
