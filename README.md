@@ -1,10 +1,14 @@
-| Task           | Time required | Assigned to   | Current Status | Finished | 
-|----------------|---------------|---------------|----------------|-----------|
-| Calendar Cache | > 5 hours  |  | in progress | - [x] ok?
-| Object Cache   | > 5 hours  |  | in progress | [x] item1<br/>[ ] item2
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>- [x] item1</li><li>- [ ] item2</li></ul>
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>[x] item1</li><li>[ ] item2</li></ul>
+# WeatherCast
+Application capabilities:
+* Location Search
+  * Current temperature
+  * Icon for weather conditions
+  * 12 hour weather forecast starting from the current local time
 
+| User status / Functions        | Authorized           | Non-authorized  |
+| ------------- |:-------------:| -----:|
+| Location Search      | - [x] aaaaa | - [ ] bbbb |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-- [x] works
-- [x] works too
+  
