@@ -10,7 +10,8 @@ Application capabilities:
 * Favorite places
   * Add or remove space from favorites
   * 6 hour weather forecast for selected place with weather conditions icons
+
 | User status / Functions        | Authorized           | Non-authorized  |
-| ------------- |:-------------:| :----:|
+| ------------- |:-------------:|:----:|
 | Location Search      | ✓ | ✓ |
 | Favorite places      | ✓ | ✕ |
