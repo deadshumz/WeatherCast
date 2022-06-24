@@ -3,12 +3,13 @@ from django.shortcuts import render
 import requests
 from django.views import View
 from .models import FavoriteCity
+import os
 
 # Функции 
 
 def forecastAPI(city):
     # https://www.weatherapi.com/
-    key = ''
+    key = os.environ['API_KEY']
     url = f'https://api.weatherapi.com/v1/forecast.json?key={key}&q={city}&days=3&aqi=no&alerts=no'
     if (requests.get(url).status_code != 200):
         return 'error'
