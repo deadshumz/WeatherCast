@@ -4,7 +4,6 @@ favorite_star = document.getElementById('favorite-star')
 favorite_btn = document.getElementById('favorite-btn')
 
 function change_favorite(e, cityname) {
-
     let formData = new FormData();
     formData.append('favorite_change', cityname)
 
@@ -14,7 +13,5 @@ function change_favorite(e, cityname) {
     xhr.send(formData);
 
     class_list = ['text-warning', 'bi-star', 'bi-star-fill']
-    for(let i in class_list) {
-        e.firstChild.classList.toggle(class_list[i])
-    }
-}
+    class_list.map(el => e.firstChild.classList.toggle(el))
+};
