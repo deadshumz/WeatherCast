@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}WeatherCast - Sign In{% endblock %}
+
+{% block content %}
+    <div class="container mt-5 p-5 main">
+        <h2 class="text-center">Authorization</h2>
+        {% if form.errors %}
+            <div class="alert alert-danger text-center p-2">
+                User with such data does not exist
+            </div>
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <label for="{{ field.name }}">{{ field.label }}</label>
+            {{ field }}
+            {% endfor %}
+            <button class="btn btn-outline-primary w-100 mt-2" type="submit">Sign In</button>
+        </form>
+        <span class="d-block text-center mt-2">Don't have an account yet? <a class="text-center d-inline" href="{% url 'users:signup' %}">Sign Up</a></span>
+    </div>
+{% endblock %}

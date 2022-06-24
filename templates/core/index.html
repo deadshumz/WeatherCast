@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}WeatherCast - Main page{% endblock %}
+
+{% block content %}
+    <div class="container mt-5 p-md-4 p-3 main">
+        <label for="cityname" class="mb-1">Search your city:</label>
+        <form class="input-group" method="POST" action="">
+            {% csrf_token %}
+            <input name="city" type="text" class="form-control bg-light rounded-start {% if result and result.error %}is-invalid{% elif result and not result.error %}is-valid{% endif %}" placeholder="New York" value="{{result.city}}">
+            <button class="btn btn-outline-primary" type="submit" id="button-addon2">Search</button>
+        </form>
+    </div>
+    {% if result and not result.error  %}
+    <div class="container mt-3 p-md-5 p-4 pt-4 result">
+        <div class="d-flex justify-content-end">
+            {% if user.is_authenticated %}
+            <button class="btn shadow-none border-0 p-0 d-block ms-auto" onclick="change_favorite(this, '{{ result.city}}')"><i class="bi fs-4 {% if result.is_favorite %}bi-star-fill text-warning{% else %}bi-star{% endif %}" id="favorite-star"></i></button>
+            {% else %}
+            <a class="btn border-0 p-0 ms-auto" href="{% url 'core:index' %}"><i class="bi fs-4 {% if result.is_favorite %}bi-star-fill text-warning{% else %}bi-star{% endif %}" id="favorite-star"></i></a>
+            {% endif %}
+        </div>
+        <h1 class="text-center" id="cityname">{{ result.city }}</h1>
+        <h2 class="text-center">{{ result.current.temperature }} &deg;C</h2>
+        <p class="text-center">{{ result.country }}</p>
+        <div class="mt-5 border rounded p-3">
+            <h4>Hourly Forecast:</h4>
+            <hr class="mb-3">
+            <div class="row forecast">
+                {% for i in result.forecast.hour_forecast %}
+                <div class="forecast-item col-xxl-1 col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                    <p class="mb-0">{{i.hour}}</p>
+                    <img src="{{ i.icon }}" alt="condition icon" class="my-2">
+                    <p>{{i.temp}} &deg;C</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if favorites %}
+    <div class="container mt-3 p-md-5 p-4 favorite-block">
+        <h2>Favorites:</h2>
+        <div class="row">
+            {% for city in favorites %}
+                <div class="col-xxl-4 col-lg-6 p-1">
+                    <div class="border rounded p-4">
+                        <div class="d-flex mb-2">
+                            <h3 class="d-inline mb-0">{{ city.name }}</h3>
+                            <button class="btn shadow-none border-0 p-0 d-inline ms-auto" onclick="change_favorite(this, '{{ city.name }}')"><i class="bi fs-4 bi-star-fill text-warning" id="favorite-star"></i></button>
+                        </div>
+                        <div class="row border rounded bg-white py-2 mini-forecast">
+                            {% for forecastday in city.forecast %}
+                            <div class="mini-forecast__item col-4 mt-md-2 mt-0 col-md text-center">
+                                <p class="mb-2">{{ forecastday.hour }}</p>
+                                <img src="{{ forecastday.icon }}" width="30" height="30" alt="weather icon">
+                                <p class="mt-1">{{ forecastday.temp }} &deg;C</p>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% load static %}
+<script src="{% static 'core/core.js' %}"></script>
+{% endblock %}

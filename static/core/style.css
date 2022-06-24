@@ -1,0 +1,108 @@
+body {
+  background-color: #003D6E !important;
+  min-height: 100%;
+}
+
+.nav-link {
+  font-weight: 500 !important;
+}
+
+.main {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.result, .favorite-block {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.video-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: opacity(0.3) brightness(0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.forecast .forecast-item:not(:first-child) {
+  border-left: 1px solid #dee2e6;
+}
+
+.favorite-day {
+  background: white;
+}
+
+.favorite-night {
+  background: black;
+  background-image: url("/static/core/bg-night.jpg");
+}
+
+.mini-forecast p {
+  font-size: 12px;
+}
+.mini-forecast .mini-forecast__item:not(:nth-child(1)) {
+  border-left: 1px solid #dee2e6;
+}
+
+@media (max-width: 1399px) {
+  .forecast .forecast-item:nth-child(7) {
+    border-left: none;
+  }
+
+  .forecast .forecast-item:nth-child(n+7) {
+    border-top: 1px solid #dee2e6;
+  }
+}
+@media (max-width: 1199px) {
+  .forecast .forecast-item:nth-child(even), .forecast-item:nth-child(8n+3), .forecast-item:nth-child(4n+5) {
+    border-left: 1px solid #dee2e6;
+  }
+}
+@media (max-width: 991px) {
+  .forecast .forecast-item:nth-child(even), .forecast .forecast-item:nth-child(4n+3) {
+    border-left: 1px solid #dee2e6;
+  }
+  .forecast .forecast-item:nth-child(4n+1) {
+    border-left: 0;
+  }
+  .forecast .forecast-item:nth-child(n+5) {
+    border-top: 1px solid #dee2e6;
+  }
+}
+@media (max-width: 767px) {
+  .mini-forecast .mini-forecast__item:nth-child(n+4) {
+    border-top: 1px solid #dee2e6;
+    padding-top: 0.75rem;
+  }
+
+  .mini-forecast .mini-forecast__item:nth-child(3n+1) {
+    border-left: 0;
+  }
+
+  .forecast .forecast-item:nth-child(3n+1) {
+    border-left: 0;
+  }
+  .forecast .forecast-item:nth-child(3n+3), .forecast .forecast-item:nth-child(3n+2) {
+    border-left: 1px solid #dee2e6;
+  }
+  .forecast .forecast-item:nth-child(n+4) {
+    border-top: 1px solid #dee2e6;
+  }
+}
+@media (max-width: 575px) {
+  .forecast .forecast-item:nth-child(odd) {
+    border-left: 0px;
+  }
+  .forecast .forecast-item:nth-child(even) {
+    border-left: 1px solid #dee2e6;
+  }
+  .forecast .forecast-item:nth-child(n+3) {
+    border-top: 1px solid #dee2e6;
+  }
+}/*# sourceMappingURL=style.css.map */
